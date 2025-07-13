@@ -1,6 +1,6 @@
 # Changelog
 
-## [1.1.1] - 2025-07-13
+## [1.0.0] - 2025-07-13
 
 ### Added
 - Initial release of customizable rating bar widget
