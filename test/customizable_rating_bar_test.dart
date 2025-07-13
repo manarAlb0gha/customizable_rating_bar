@@ -3,7 +3,8 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:customizable_rating_bar/customizable_rating_bar.dart';
 
 void main() {
-  testWidgets('Default rating bar renders correctly', (WidgetTester tester) async {
+  testWidgets('Default rating bar renders correctly',
+      (WidgetTester tester) async {
     await tester.pumpWidget(
       const MaterialApp(
         home: Scaffold(
@@ -33,5 +34,4 @@ void main() {
     await tester.tap(find.byIcon(Icons.star_border).first);
     expect(newRating, 1.0);
   });
-
 }

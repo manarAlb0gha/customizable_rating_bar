@@ -114,7 +114,8 @@ class _CustomizableRatingBarState extends State<CustomizableRatingBar> {
       children: List.generate(widget.itemCount, (index) {
         return GestureDetector(
           onTapDown: (details) => _updateRating(details.globalPosition),
-          onHorizontalDragUpdate: (details) => _updateRating(details.globalPosition),
+          onHorizontalDragUpdate: (details) =>
+              _updateRating(details.globalPosition),
           child: _buildIcon(index + 1),
         );
       }),
@@ -131,7 +132,7 @@ class _CustomizableRatingBarState extends State<CustomizableRatingBar> {
       color = widget.filledColor;
     } else if (position - 0.5 <= _currentRating && widget.allowHalfRating) {
       iconData = widget.filledIcon;
-      color = widget.filledColor.withOpacity(0.5);
+      color = widget.filledColor.withValues(alpha: 0.5);
     } else {
       iconData = widget.unfilledIcon;
       color = widget.unfilledColor;
